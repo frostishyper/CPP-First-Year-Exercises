@@ -5,6 +5,12 @@
 
 using namespace std;
 
+void Pause() {
+    cout << "Press Enter to return to the menu...";
+    cin.ignore(); 
+    cin.get();   
+}
+
 void Rectangle () {
 
     float width;
@@ -19,7 +25,9 @@ void Rectangle () {
 
     RectangleArea = width * length;
 
-    cout << endl << "Your Rectangle's Area Is: " << RectangleArea << endl;
+    cout << endl << "Your Rectangle's Area Is: " << RectangleArea << endl << endl;
+
+    Pause();
 
 }
 
@@ -33,7 +41,9 @@ void Circle () {
 
     CircleArea = M_PI * radius * radius;
 
-    cout << endl << "Your Circle's Area Is: " << CircleArea << endl;
+    cout << endl << "Your Circle's Area Is: " << CircleArea << endl << endl;
+
+    Pause();
 
 }
 
@@ -51,7 +61,9 @@ void Triangle () {
 
     TriangleArea = base * height / 2;
 
-    cout << endl << "Your Traingle's Area Is: " << TriangleArea << endl;
+    cout << endl << "Your Traingle's Area Is: " << TriangleArea << endl << endl;
+
+    Pause();
 
 }
 
@@ -65,7 +77,9 @@ void Square () {
 
     SquareArea = side * side;
 
-    cout << endl << "Your Square's Area Is: " << SquareArea << endl;
+    cout << endl << "Your Square's Area Is: " << SquareArea << endl << endl;
+
+   Pause();
 
 }
 
@@ -83,6 +97,7 @@ int main() {
         cout << "X. Exit" << endl << endl;
 
         cin >> choice;
+        cin.ignore();
 
         if (choice == 'A' || choice == 'a') {
 
